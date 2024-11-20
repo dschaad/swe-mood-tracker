@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="home.css">
     <title>SWE Mood Tracker</title>
 </head>
 <body>
@@ -15,27 +15,77 @@
         <div class="box">
             <p>This is a box!</p>
             </div>
+        
+        <!-- Mood options -->
         <div class="mood-options">
-            <section class="postive">
-                <h4>Positive</h4>
-                <p>○ Happy</p>
-                <p>○ Grateful</p>
-                <p>○ Ecstatic</p>
-            </section>
-            <section class="neutral">
-                <h4>Neutral</h4>
-                <p>○ Content</p>
-                <p>○ Bored</p>
-                <p>○ Meh</p>
-            </section>
-            <section class="negative">
-                <h4>Negative</h4>
-                <p>○ Anxious</p>
-                <p>○ Sad</p>
-                <p>○ Frustrated</p>
-            </section>
+                
+                <form class="positive">
+                    <h4>Positive</h4>
+                    <p>
+                        <input type="radio" id="happy" name="emotion" value="happy">
+                        <label for="happy">Happy</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="grateful" name="emotion" value="grateful">
+                        <label for="grateful">Grateful</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="ecstatic" name="emotion" value="ecstatic">
+                        <label for="ecstatic">Ecstatic</label>
+                    </p>
+                </form>
+
+                <form class="neutral">
+                    <h4>Neutral</h4>
+                    <p>
+                        <input type="radio" id="content" name="emotion" value="content">
+                        <label for="content">Content</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="bored" name="emotion" value="bored">
+                        <label for="bored">Bored</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="meh" name="emotion" value="meh">
+                        <label for="meh">Meh</label>
+                    </p>
+                </form>
+                <form class="negative">
+                    <h4>Negative</h4>
+                    <p>
+                        <input type="radio" id="anxious" name="emotion" value="anxious">
+                        <label for="anxious">Anxious</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="sad" name="emotion" value="sad">
+                        <label for="sad">Sad</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="frustrated" name="emotion" value="frustrated">
+                        <label for="frustrated">Frustrated</label>
+                    </p>
+                </form>
 
         </div>
+
+
+        <!-- Let user input their mood -->
+        <form class="user-mood" action="/my-handling-form-page" method="post">
+            <p class="mood-box">
+              <label for="mood">Mood:</label>
+              <input type="text" id="mood" name="user_mood" placeholder="How are you feeling today?" />
+            </p>
+            <p class="contact_button">
+                <button class="contact" type="submit">Submit</button>
+            </p>
+        </form>
+
+        <!-- Continue button -->
+        <div class="arrow-box">
+            <a class="arrow" href="#">→</a>
+        </div>
+        
+
     </main>
 
     <footer>
